@@ -11,13 +11,6 @@ Please also check the license and usage there if you want to make use of this co
 Please check the README file in https://github.com/tobyperrett/few-shot-action-recognition. Here we quote and slightly adapt a part of the descriptions for quick start and running as follows:
 ###############################################################################
 
-### Datasets supported
-
-- Something-Something V2 ([splits from OTAM](https://openaccess.thecvf.com/content_CVPR_2020/papers/Cao_Few-Shot_Video_Classification_via_Temporal_Alignment_CVPR_2020_paper.pdf))
-- UCF101 ([splits from ARN](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500511.pdf))
-- HMDB51 ([splits from ARN](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500511.pdf))
-
-
 ### Requirements
 
 - python >= 3.6
@@ -31,9 +24,9 @@ Please check the README file in https://github.com/tobyperrett/few-shot-action-r
 
 Download the datasets from their original locations:
 
-- [Something-Something V2](https://20bn.com/datasets/something-something#download)
-- [UCF101](https://www.crcv.ucf.edu/data/UCF101.php)
-- [HMDB51](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/#Downloads)
+- [Something-Something V2](https://20bn.com/datasets/something-something#download) ([splits from OTAM](https://openaccess.thecvf.com/content_CVPR_2020/papers/Cao_Few-Shot_Video_Classification_via_Temporal_Alignment_CVPR_2020_paper.pdf))
+- [UCF101](https://www.crcv.ucf.edu/data/UCF101.php) ([splits from ARN](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500511.pdf))
+- [HMDB51](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/#Downloads) ([splits from ARN](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500511.pdf))
 
 Once you've downloaded the datasets, you can use the extract scripts to extract frames and put them in train/val/test folders. You'll need to modify the paths at the top of the scripts.
 To remove unnecessary frames and save space (e.g. just leave 8 uniformly sampled frames), you can use shrink_dataset.py. Again, modify the paths at the top of the sctipt.
