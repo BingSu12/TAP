@@ -8,7 +8,7 @@ Please also check the license and usage there if you want to make use of this co
 
 
 # Usage
-Please check the README file in https://github.com/tobyperrett/few-shot-action-recognition. Here we quote and slightly a part of the descriptions for quick start and running as follows:
+Please check the README file in https://github.com/tobyperrett/few-shot-action-recognition. Here we quote and slightly adapt a part of the descriptions for quick start and running as follows:
 ###############################################################################
 
 ### Datasets supported
@@ -16,16 +16,7 @@ Please check the README file in https://github.com/tobyperrett/few-shot-action-r
 - Something-Something V2 ([splits from OTAM](https://openaccess.thecvf.com/content_CVPR_2020/papers/Cao_Few-Shot_Video_Classification_via_Temporal_Alignment_CVPR_2020_paper.pdf))
 - UCF101 ([splits from ARN](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500511.pdf))
 - HMDB51 ([splits from ARN](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500511.pdf))
-- A small version of Something-Something V2 with 5 classes and 10 videos per class per split included in the repo for development purposes
 
-I've chosen not to support Kinetics because the full dataset doesn't exist (videos are continually removed from youtube/marked as private) meaning results aren't repeatable, and it's a pain to download the videos which are still there as youtube can randomly block you scraping. Additionaly, it's not a very good test of few-shot action recognition methods as classes can be distinguished by appearance alone, which means it doesn't test temporal understanding.
-
-
-# Instructions
-
-## Installation
-
-Conda is recommended. 
 
 ### Requirements
 
@@ -35,12 +26,8 @@ Conda is recommended.
 - ffmpeg (for extracting data)
 - soft_dtw (https://github.com/Sleepwalking/pytorch-softdtw)
 
-### Hardware
 
-To use a ResNet 50 backbone you'll need at least a 4 x 11GPU machine. You can fit everything all on one GPU using a ResNet 18 backbone.
-
-
-## Data preparation
+### Data preparation
 
 Download the datasets from their original locations:
 
@@ -52,7 +39,7 @@ Once you've downloaded the datasets, you can use the extract scripts to extract 
 To remove unnecessary frames and save space (e.g. just leave 8 uniformly sampled frames), you can use shrink_dataset.py. Again, modify the paths at the top of the sctipt.
 
 
-## Running examples
+### Running examples
 
 Training TAP-CNN on the UCF101 dataset, 5-way 1-shot:
 ```bash
